@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import devImg from '../assets/dev.png'
-import { PrimaryButton } from '../atoms/Buttons'
 
 export default function Hero() {
   return (
