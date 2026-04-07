@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './organisms/Navbar'
+import Hero from './organisms/Hero'
+import About from './organisms/About'
+import Skills from './organisms/Skills'
+import Projects from './organisms/Projects'
+import Contact from './organisms/Contact'
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider>
+      <div className="min-h-screen dark:bg-[#050505] text-black dark:text-white relative overflow-hidden">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </div>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
