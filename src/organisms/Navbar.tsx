@@ -30,17 +30,22 @@ export default function Navbar() {
         {/* Logo */}
         <h1
           onClick={() => scrollToSection('hero')}
-          className="hidden md:block text-3xl font-bold text-yellow-500 dark:bg-gradient-to-r from-purple-500 to-cyan-400 bg-clip-text dark:text-transparent cursor-pointer"
+          className="text-3xl font-bold cursor-pointer whitespace-nowrap"
         >
-          Jasmit Lathiya
+          <span className="text-yellow-500 dark:bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text dark:text-transparent whitespace-nowrap">
+            Jasmit Lathiya
+          </span>
+          {/* Jasmit Lathiya */}
         </h1>
         {/* Menu */}
-        <div className="w-full md:w-auto flex items-center justify-evenly md:justify-start gap-2 md:gap-4 lg:gap-8 text-sm text-gray-700 dark:text-gray-300">
+        <div className="w-full md:w-auto flex items-center justify-end md:justify-start gap-2 md:gap-4 lg:gap-8 text-sm text-gray-700 dark:text-gray-300">
           {navItems.map((item) => (
             <span
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className={'cursor-pointer text-xs sm:text-sm lg:text-base'}
+              className={
+                'hidden md:block cursor-pointer text-xs sm:text-sm lg:text-base'
+              }
             >
               {item}
             </span>
@@ -51,7 +56,7 @@ export default function Navbar() {
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="
-            relative w-8 sm:w-16 h-8 flex items-center rounded-full p-1
+            relative w-8 md:w-16 h-8 flex items-center rounded-full p-1
             bg-gray-300 dark:bg-gradient-to-r dark:from-purple-500 dark:via-pink-500 dark:to-cyan-400
             transition-all duration-300
           "
@@ -62,7 +67,7 @@ export default function Navbar() {
             {/* Circle */}
             <div
               className={`relative z-10 w-6 h-6 rounded-full bg-black dark:bg-white text-xs flex items-center justify-center transition-transform duration-300
-              ${theme === 'dark' ? 'translate-x-0 sm:translate-x-8' : 'translate-x-0'}`}
+              ${theme === 'dark' ? 'translate-x-0 md:translate-x-8' : 'translate-x-0'}`}
             >
               {theme === 'dark' ? '🌙' : '☀️'}
             </div>
