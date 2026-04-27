@@ -27,7 +27,7 @@ export const EXPERIANCES: Project[] = [
     ],
   },
   {
-    title: 'Inventory Management - Account Software',
+    title: 'Inventory Management Software',
     desc: 'Fullstack Developer (Freelancer)',
     liveSiteURL: 'stock-management-4a83b.web.app',
     explanation: [
