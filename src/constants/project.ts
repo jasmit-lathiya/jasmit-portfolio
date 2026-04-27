@@ -3,7 +3,7 @@ import { Project } from './types'
 export const EXPERIANCES: Project[] = [
   {
     title: 'Tekion - Assosiate Software Engineer',
-    desc: 'Intern → Full-Time',
+    desc: 'Frontend Developer (Intern → Full-Time)',
     explanation: [
       'Developed and enhanced web applications using React, Redux, and SASS, translating Figma designs into pixel-perfect, functional webpages.',
       'During Internship built and maintained internal Leave Management System, enabling employees to apply for leave, managers to approve/reject requests, and admins to manage records. Implemented secure login authentication and role-based access control.',
@@ -14,7 +14,7 @@ export const EXPERIANCES: Project[] = [
   },
   {
     title: 'Tribe - Private Jet Charter Platform',
-    desc: 'Frontend Developer - Freelancer',
+    desc: 'Frontend Developer (Freelancer)',
     liveSiteURL: 'app.flytribe.ae',
     explanation: [
       'Developed pixel-perfect UI in React using MUI based on client-provided Figma designs.',
@@ -27,8 +27,22 @@ export const EXPERIANCES: Project[] = [
     ],
   },
   {
+    title: 'Inventory Management - Account Software',
+    desc: 'Fullstack Developer (Freelancer)',
+    liveSiteURL: 'stock-management-4a83b.web.app',
+    explanation: [
+      'Developed a full-stack inventory control application for managing supplies with secure authentication and comprehensive analytics capabilities.',
+      'Built responsive frontend components using React and TypeScript, implementing modular architecture with pages, organisms, molecules, and helpers for maintainability and reusability across a multi-section dashboard.',
+      'Designed and implemented secure authentication system with login validation, user session management, and role-based data filtering for different access levels.',
+      'Integrated database operations for real-time inventory tracking, including chemical and cleaning supplies with update mechanisms and historical analytics/reporting features.',
+      'Created dynamic dashboard with multiple card-based inventory sections displaying current stock counts, status indicators, and interactive update functionality.',
+      'Integrated Firebase into the application to enable backend services such as authentication and real-time database connectivity.',
+      'Styled application using Tailwind CSS with modern design patterns (shadow effects, responsive layouts, color theming) for a polished, professional user interface.',
+    ],
+  },
+  {
     title: 'Sorted Account - Account Software',
-    desc: 'Fullstack Developer - Freelancer',
+    desc: 'Fullstack Developer (Freelancer)',
     liveSiteURL: 'sorted-account.web.app',
     explanation: [
       'Developed a custom accounting web application tailored to client requirements using React.js, Material UI and Firebase.',
