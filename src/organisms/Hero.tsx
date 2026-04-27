@@ -7,7 +7,7 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-center md:justify-between px-6 md:px-16 pt-28 relative overflow-hidden gap-4"
     >
-      {/* 🌈 Gradient Glow */}
+      {/*Gradient Glow */}
       <div className="hidden dark:block absolute w-[600px] h-[600px] bg-purple-500/30 blur-[150px] rounded-full left-[-200px] top-[100px]" />
       <div className="absolute w-[500px] h-[500px] bg-cyan-400/20 blur-[150px] rounded-full right-[-150px] bottom-[100px]" />
 
@@ -27,21 +27,13 @@ export default function Hero() {
           </span>
           <br />
         </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-4 xl font-bold leading-tight text-black dark:text-white">
-          Frontend Developer
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight text-black dark:text-white">
+          Software Developer
         </h2>
 
         <p className="mt-6 text-gray-600 dark:text-gray-400">
           Turning ideas into clean and scalable web experiences
         </p>
-
-        {/* <div className="mt-8 flex gap-4">
-          <PrimaryButton>Hire Me</PrimaryButton>
-
-          <button className="px-6 py-3 rounded-lg border border-black/20 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition">
-            Download CV
-          </button>
-        </div> */}
       </motion.div>
 
       {/* RIGHT SIDE IMAGE */}
@@ -52,16 +44,16 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="flex items-center justify-center w-[250px] sm:w-[350px] md:w-[450px] lg:w-[700px] h-[400px] md:h-[600px] relative z-10"
       >
-        {/* 🔵 Main Neon Circle */}
+        {/* Main Neon Circle */}
         <div
           className="absolute w-[250px] md:w-[420px] h-[250px] md:h-[420px] rounded-full border border-cyan-400/30 
   shadow-[0_0_80px_rgba(34,211,238,0.4)]"
         />
 
-        {/* 🟣 Inner Glow */}
+        {/* Inner Glow */}
         <div className="absolute w-[250px] md:w-[450px] h-[250px] md:h-[450px] rounded-full bg-purple-500/20 blur-3xl" />
 
-        {/* 🔵 Outer Glow */}
+        {/* Outer Glow */}
         <div className="absolute w-[350px] md:w-[600px] h-[350px] md:h-[600px] rounded-full bg-cyan-400/10 blur-[120px]" />
 
         {/* ✨ Floating Particles */}
