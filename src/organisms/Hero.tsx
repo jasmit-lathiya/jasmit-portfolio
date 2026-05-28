@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import devImg from '../assets/dev.png'
+import devImg from '../assets/dev.webp'
 import AnimatedText from '../molecules/animatedText'
 
 export default function Hero() {
@@ -14,7 +14,7 @@ export default function Hero() {
     >
       {/*Gradient Glow */}
       <div className="hidden dark:block absolute w-[600px] h-[600px] bg-purple-500/30 blur-[150px] rounded-full left-[-200px] top-[100px]" />
-      <div className="absolute w-[500px] h-[500px] bg-cyan-400/20 blur-[150px] rounded-full right-[-150px] bottom-[100px]" />
+      <div className="absolute w-[500px] h-[500px] bg-cyan-400/20 blur-[150px] rounded-full right-[150px] bottom-[100px]" />
 
       {/* LEFT CONTENT */}
       <motion.div
@@ -76,17 +76,16 @@ export default function Hero() {
           transition={{ duration: 5, repeat: Infinity }}
           className="absolute w-2 h-2 bg-cyan-400 rounded-full bottom-16 right-12 shadow-glow"
         />
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="absolute w-[280px] md:w-[480px] h-[280px] md:h-[480px] rounded-full border border-purple-400/20"
-        />
+        <motion.div className="absolute w-[280px] md:w-[480px] h-[280px] md:h-[480px] rounded-full border border-purple-400/20" />
 
         <motion.img
           src={devImg}
           alt="Developer"
-          className="relative z-10 w-full drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-          animate={{ y: [0, -20, 0] }}
+          loading="lazy"
+          decoding="async"
+          className="relative z-10 w-full drop-shadow-2xl"
+          whileInView={{ y: [0, -20, 0] }}
+          viewport={{ once: true }}
           transition={{ duration: 4, repeat: 0 }}
         />
       </motion.div>

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { motion, Variants } from 'framer-motion'
 
 const container: Variants = {
@@ -81,4 +82,4 @@ const AnimatedText = ({
   )
 }
 
-export default AnimatedText
+export default memo(AnimatedText)

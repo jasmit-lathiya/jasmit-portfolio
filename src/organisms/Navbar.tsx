@@ -1,28 +1,29 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
 import { ThemeContext } from '../context/ThemeContext'
+import NavItem from '../molecules/navItem'
 
 const navItems = ['About', 'Skills', 'Experience', 'Contact']
 
+const scrollToSection = (sectionName: string) => {
+  const section = document.getElementById(sectionName)
+  section?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export default function Navbar() {
   const { theme, setTheme } = useContext(ThemeContext)
-
-  const scrollToSection = (sectionName: string) => {
-    const section = document.getElementById(sectionName)
-    section?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <motion.div
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      className="fixed top-0 w-full z-50"
+      transition={{ duration: 0.7 }}
+      className="fixed top-0 w-full z-50 h-16"
     >
       {/* Navbar */}
       <div
         className="
-        px-2 sm:px-4 md:px-8 py-4 flex justify-between items-center backdrop-blur-xl
-        bg-white/70 dark:bg-black/40
+        px-2 sm:px-4 md:px-8 py-4 flex justify-between items-center backdrop-blur-md
         border-b border-black/10 dark:border-white/10
         transition-colors duration-300
       "
@@ -40,15 +41,12 @@ export default function Navbar() {
         {/* Menu */}
         <div className="w-full md:w-auto flex items-center justify-end md:justify-start gap-2 md:gap-4 lg:gap-8 text-sm text-gray-700 dark:text-gray-300">
           {navItems.map((item) => (
-            <span
+            <NavItem
               key={item}
               onClick={() => scrollToSection(item.toLowerCase())}
-              className={
-                'hidden md:block cursor-pointer text-xs sm:text-sm lg:text-base'
-              }
             >
               {item}
-            </span>
+            </NavItem>
           ))}
 
           {/* Right Controls */}
@@ -58,7 +56,7 @@ export default function Navbar() {
             className="
             relative w-8 md:w-16 h-8 flex items-center rounded-full p-1
             bg-gray-300 dark:bg-gradient-to-r dark:from-purple-500 dark:via-pink-500 dark:to-cyan-400
-            transition-all duration-300
+            transition-transform duration-300
           "
           >
             {/* Inner Track */}
@@ -66,8 +64,8 @@ export default function Navbar() {
 
             {/* Circle */}
             <div
-              className={`relative z-10 w-6 h-6 rounded-full bg-black dark:bg-white text-xs flex items-center justify-center transition-transform duration-300
-              ${theme === 'dark' ? 'translate-x-0 md:translate-x-8' : 'translate-x-0'}`}
+              className={`will-change-transform relative z-10 w-6 h-6 rounded-full bg-black dark:bg-white text-xs flex items-center justify-center transition-transform duration-300
+              ${theme === 'dark' ? 'md:translate-x-8' : 'translate-x-0'}`}
             >
               {theme === 'dark' ? '🌙' : '☀️'}
             </div>

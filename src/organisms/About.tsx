@@ -66,7 +66,7 @@ export default function About() {
           <img
             src={collegeLogoImg}
             alt="College Logo"
-            className="relative z-10 h-full max-h-[200px] max-w-[200px] drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+            className="relative z-10 h-full max-h-[200px] max-w-[200px] drop-shadow-2xl"
           />
           <div className="flex flex-col gap-4 justify-center">
             <span>
