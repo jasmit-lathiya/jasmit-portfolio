@@ -1,7 +1,12 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import devImg from '../assets/dev.png'
+import AnimatedText from '../molecules/animatedText'
 
 export default function Hero() {
+  const [isNameAnimationCompleted, setIsNameAnimationCompleted] =
+    useState(false)
+
   return (
     <section
       id="hero"
@@ -14,8 +19,9 @@ export default function Hero() {
       {/* LEFT CONTENT */}
       <motion.div
         initial={{ opacity: 0, x: -80 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
+        onAnimationComplete={() => setIsNameAnimationCompleted(true)}
         className="max-w-xl z-10"
       >
         <p className="text-black dark:text-white font-semibold mb-3">Hello !</p>
@@ -31,16 +37,18 @@ export default function Hero() {
           Software Developer
         </h2>
 
-        <p className="mt-6 text-gray-600 dark:text-gray-400">
-          Turning ideas into clean and scalable web experiences
-        </p>
+        <AnimatedText
+          sentence="Turning ideas into clean and scalable web experiences"
+          containerClassName="mt-6 text-gray-600 dark:text-gray-400"
+          canStartAnimation={isNameAnimationCompleted}
+        />
       </motion.div>
 
       {/* RIGHT SIDE IMAGE */}
       {/* RIGHT SIDE BACKGROUND EFFECT */}
       <motion.div
         initial={{ opacity: 0, x: 80 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         className="flex items-center justify-center w-[250px] sm:w-[350px] md:w-[450px] lg:w-[700px] h-[400px] md:h-[600px] relative z-10"
       >

@@ -3,13 +3,12 @@ import { ReactComponent as MailIcon } from '../assets/Icons/mail.svg'
 import { ReactComponent as LinkedInIcon } from '../assets/Icons/linkedin.svg'
 import { ReactComponent as GithubIcon } from '../assets/Icons/github.svg'
 import { PrimaryButton } from '../atoms/Buttons'
+import AnimatedText from '../molecules/animatedText'
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      // className="py-24 px-6 bg-gray-100 dark:bg-[#0a0a0a] text-center"
-
       className=" min-h-screen flex flex-col items-center justify-center py-24 px-6 bg-gray-100 dark:bg-[#0a0a0a] text-center"
     >
       <motion.div
@@ -21,12 +20,16 @@ export default function Contact() {
             Contact
           </span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
-          Have a project in mind?
-        </p>
-        <p className="text-gray-600 dark:text-gray-400 mb-8">
-          Let's build something amazing, Available for freelancing work.
-        </p>
+        <AnimatedText
+          sentence="Have a project in mind?"
+          className="text-gray-600 dark:text-gray-400"
+        />
+
+        <AnimatedText
+          sentence="Let's build something amazing, Available for freelancing work."
+          className="text-gray-600 dark:text-gray-400 mb-8"
+        />
+
         <div className="flex flex-row gap-2 justify-center">
           <a href="mailto:lathiyajasmit@gmail.com">
             <PrimaryButton className="text-white hover:text-green-400">

@@ -8,6 +8,7 @@ import { ReactComponent as MUIIcon } from '../../assets/Icons/mui.svg'
 import { ReactComponent as TailwindIcon } from '../../assets/Icons/tailwind.svg'
 import { ReactComponent as ReduxIcon } from '../../assets/Icons/redux.svg'
 import { ReactComponent as NextjsIcon } from '../../assets/Icons/nextjs.svg'
+import { ReactComponent as FarmerIcon } from '../../assets/Icons/framer.svg'
 import { ReactComponent as FirebaseIcon } from '../../assets/Icons/firebase.svg'
 import { ReactComponent as SupabaseIcon } from '../../assets/Icons/supabase.svg'
 import { ReactComponent as GitIcon } from '../../assets/Icons/git.svg'
@@ -30,6 +31,7 @@ const skills = [
   { name: 'Tailwind CSS', icon: TailwindIcon },
   { name: 'Redux', icon: ReduxIcon },
   { name: 'Next.js', icon: NextjsIcon },
+  { name: 'Framer', icon: FarmerIcon },
 ]
 
 const beAndHosting = [
