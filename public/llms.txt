@@ -1,0 +1,22 @@
+# Jasmit Lathiya
+
+> Portfolio of Jasmit Lathiya, a frontend-focused software developer who builds modern, responsive web applications with React, TypeScript, Material UI, Tailwind CSS, Firebase, and Supabase.
+
+## Portfolio
+
+- [Jasmit Lathiya portfolio](https://jasmit-lathiya.vercel.app/): Homepage containing the complete portfolio.
+- [About and education](https://jasmit-lathiya.vercel.app/#about): Background, development focus, and education.
+- [Skills](https://jasmit-lathiya.vercel.app/#skills): Frontend technologies and development tools.
+- [Experience and projects](https://jasmit-lathiya.vercel.app/#experience): Tekion, Tribe, inventory management, accounting software, and SforS projects.
+- [Contact](https://jasmit-lathiya.vercel.app/#contact): Email, LinkedIn, and GitHub contact options.
+
+## Profiles
+
+- [GitHub](https://github.com/jasmit-lathiya): Jasmit Lathiya's code repositories.
+- [LinkedIn](https://www.linkedin.com/in/jasmit-lathiya-655424166): Jasmit Lathiya's professional profile.
+
+## Optional
+
+- [Inventory Management Software](https://stock-management-4a83b.web.app/): React and TypeScript inventory application with Firebase authentication, real-time data, and analytics.
+- [Sorted Account](https://sorted-account.web.app/): React and Material UI accounting application with Firebase authentication and transaction workflows.
+- [Tribe](https://app.flytribe.ae/): Private jet charter platform with dashboards, itinerary management, search, filtering, chat, and quotation workflows.
