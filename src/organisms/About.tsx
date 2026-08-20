@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import collegeLogoImg from '../assets/collegeLogo.png' // ✅ import image
+import { motion } from "framer-motion";
+import collegeLogoImg from "../assets/collegeLogo-small.png";
 
 export default function About() {
   return (
@@ -66,6 +66,10 @@ export default function About() {
           <img
             src={collegeLogoImg}
             alt="College Logo"
+            width={256}
+            height={256}
+            loading="lazy"
+            decoding="async"
             className="relative z-10 h-full max-h-[200px] max-w-[200px] drop-shadow-2xl"
           />
           <div className="flex flex-col gap-4 justify-center">
@@ -79,5 +83,5 @@ export default function About() {
         </div>
       </motion.div>
     </section>
-  )
+  );
 }

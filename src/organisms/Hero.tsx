@@ -1,11 +1,11 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import devImg from '../assets/dev.webp'
-import AnimatedText from '../molecules/animatedText'
+import { useState } from "react";
+import { motion } from "framer-motion";
+import devImg from "../assets/dev.webp";
+import AnimatedText from "../molecules/animatedText";
 
 export default function Hero() {
   const [isNameAnimationCompleted, setIsNameAnimationCompleted] =
-    useState(false)
+    useState(false);
 
   return (
     <section
@@ -27,7 +27,7 @@ export default function Hero() {
         <p className="text-black dark:text-white font-semibold mb-3">Hello !</p>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black dark:text-white">
-          I'm{' '}
+          I'm{" "}
           <span className="text-yellow-500 dark:bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text dark:text-transparent whitespace-nowrap">
             Jasmit Lathiya
           </span>
@@ -81,7 +81,9 @@ export default function Hero() {
         <motion.img
           src={devImg}
           alt="Developer"
-          loading="lazy"
+          width={1024}
+          height={1024}
+          fetchPriority="high"
           decoding="async"
           className="relative z-10 w-full drop-shadow-2xl"
           whileInView={{ y: [0, -20, 0] }}
@@ -90,5 +92,5 @@ export default function Hero() {
         />
       </motion.div>
     </section>
-  )
+  );
 }
