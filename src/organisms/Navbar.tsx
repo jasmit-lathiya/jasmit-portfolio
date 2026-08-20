@@ -1,17 +1,17 @@
-import { useContext } from 'react'
-import { motion } from 'framer-motion'
-import { ThemeContext } from '../context/ThemeContext'
-import NavItem from '../molecules/navItem'
+import { useContext } from "react";
+import { motion } from "framer-motion";
+import { ThemeContext } from "../context/ThemeContext";
+import NavItem from "../molecules/navItem";
 
-const navItems = ['About', 'Skills', 'Experience', 'Contact']
+const navItems = ["About", "Skills", "Experience", "Contact"];
 
 const scrollToSection = (sectionName: string) => {
-  const section = document.getElementById(sectionName)
-  section?.scrollIntoView({ behavior: 'smooth' })
-}
+  const section = document.getElementById(sectionName);
+  section?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Navbar() {
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <motion.div
@@ -30,7 +30,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <h1
-          onClick={() => scrollToSection('hero')}
+          onClick={() => scrollToSection("hero")}
           className="text-3xl font-bold cursor-pointer whitespace-nowrap"
         >
           <span className="text-yellow-500 dark:bg-gradient-to-r from-pink-500 via-purple-400 to-cyan-400 bg-clip-text dark:text-transparent whitespace-nowrap">
@@ -52,7 +52,8 @@ export default function Navbar() {
           {/* Right Controls */}
           {/* Toggle */}
           <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="
             relative w-8 md:w-16 h-8 flex items-center rounded-full p-1
             bg-gray-300 dark:bg-gradient-to-r dark:from-purple-500 dark:via-pink-500 dark:to-cyan-400
@@ -65,9 +66,9 @@ export default function Navbar() {
             {/* Circle */}
             <div
               className={`will-change-transform relative z-10 w-6 h-6 rounded-full bg-black dark:bg-white text-xs flex items-center justify-center transition-transform duration-300
-              ${theme === 'dark' ? 'md:translate-x-8' : 'translate-x-0'}`}
+              ${theme === "dark" ? "md:translate-x-8" : "translate-x-0"}`}
             >
-              {theme === 'dark' ? '🌙' : '☀️'}
+              {theme === "dark" ? "🌙" : "☀️"}
             </div>
           </button>
         </div>
@@ -76,5 +77,5 @@ export default function Navbar() {
       {/* Bottom Glow */}
       <div className="hidden dark:block h-[2px] w-full bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-400 opacity-70 blur-sm" />
     </motion.div>
-  )
+  );
 }

@@ -1,27 +1,27 @@
-import { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Project } from '../constants/types'
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Project } from "../constants/types";
 
 interface ProjectCardProps {
-  project: Project
-  index: number
+  project: Project;
+  index: number;
 }
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = "auto";
     }
 
     return () => {
-      document.body.style.overflow = 'auto'
-    }
-  }, [isModalOpen])
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
 
   return (
     <motion.div
@@ -37,8 +37,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         hover:shadow-2xl
       "
       onMouseMove={(e) => {
-        const rect = e.currentTarget.getBoundingClientRect()
-        setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+        const rect = e.currentTarget.getBoundingClientRect();
+        setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
       }}
     >
       {/* Gradient overlay */}
@@ -83,6 +83,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="flex flex-row justify-between items-center">
                   <h2 className="text-2xl font-bold mb-2">{project.title}</h2>
                   <button
+                    aria-label={`Close ${project.title} details`}
                     className="text-gray-500 hover:text-black dark:hover:text-white cursor-pointer"
                     onClick={() => setIsModalOpen(false)}
                   >
@@ -95,11 +96,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
                 {project.liveSiteURL && (
                   <p className="text-gray-600 dark:text-gray-400 mt-2">
-                    You can see live site here :{' '}
+                    You can see live site here :{" "}
                     <span
                       className="text-blue-500 cursor-pointer"
                       onClick={() => {
-                        window.open(`https://${project.liveSiteURL}`)
+                        window.open(`https://${project.liveSiteURL}`);
                       }}
                     >
                       {project.liveSiteURL}
@@ -118,5 +119,5 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         )}
       </AnimatePresence>
     </motion.div>
-  )
+  );
 }

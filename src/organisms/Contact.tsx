@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion'
-import { ReactComponent as MailIcon } from '../assets/Icons/mail.svg'
-import { ReactComponent as LinkedInIcon } from '../assets/Icons/linkedin.svg'
-import { ReactComponent as GithubIcon } from '../assets/Icons/github.svg'
-import { PrimaryButton } from '../atoms/Buttons'
-import AnimatedText from '../molecules/animatedText'
+import { motion } from "framer-motion";
+import { ReactComponent as MailIcon } from "../assets/Icons/mail.svg";
+import { ReactComponent as LinkedInIcon } from "../assets/Icons/linkedin.svg";
+import { ReactComponent as GithubIcon } from "../assets/Icons/github.svg";
+import { PrimaryButton } from "../atoms/Buttons";
+import AnimatedText from "../molecules/animatedText";
 
 export default function Contact() {
   return (
@@ -31,32 +31,36 @@ export default function Contact() {
         />
 
         <div className="flex flex-row gap-2 justify-center">
-          <a href="mailto:lathiyajasmit@gmail.com">
-            <PrimaryButton className="text-white hover:text-green-400">
-              <MailIcon width="30px" height="30px" />
-            </PrimaryButton>
+          <a
+            href="mailto:lathiyajasmit@gmail.com"
+            aria-label="Email Jasmit Lathiya"
+            className="inline-flex px-6 py-3 rounded-lg bg-yellow-500 dark:bg-gradient-to-r dark:from-purple-600 dark:to-pink-500 text-white hover:scale-105 transition hover:text-green-400"
+          >
+            <MailIcon width="30px" height="30px" aria-hidden="true" />
           </a>
 
           <PrimaryButton
+            aria-label="Open Jasmit Lathiya's LinkedIn profile"
             onClick={() => {
               window.open(
-                'https://www.linkedin.com/in/jasmit-lathiya-655424166',
-              )
+                "https://www.linkedin.com/in/jasmit-lathiya-655424166",
+              );
             }}
             className="text-white hover:text-[#0A66C2]"
           >
-            <LinkedInIcon width="30px" height="30px" />
+            <LinkedInIcon width="30px" height="30px" aria-hidden="true" />
           </PrimaryButton>
           <PrimaryButton
+            aria-label="Open Jasmit Lathiya's GitHub profile"
             onClick={() => {
-              window.open('https://github.com/jasmit-lathiya')
+              window.open("https://github.com/jasmit-lathiya");
             }}
             className="text-white hover:text-black"
           >
-            <GithubIcon width="30px" height="30px" />
+            <GithubIcon width="30px" height="30px" aria-hidden="true" />
           </PrimaryButton>
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
